@@ -25,7 +25,9 @@ env = Environment(loader=FileSystemLoader(template_dir))
 from genie.testbed import load
 from pyats.log.utils import banner
 
+# ----------------
 # Get logger for script
+# ----------------
 log = logging.getLogger(__name__)
 
 # ----------------
