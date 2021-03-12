@@ -1,0 +1,16 @@
+devices:
+    3850:
+      alias: '3850'
+      type: 'switch'
+      os: 'iosxe'
+      platform: cat3850
+      credentials:
+        default:
+          username: admin
+          password: "%ENC{}"
+      connections:        
+        cli:
+          protocol: ssh
+          ip: ""
+          arguments:
+            connection_timeout: 360  

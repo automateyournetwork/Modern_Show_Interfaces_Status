@@ -1,0 +1,4 @@
+Interface,Name,Status,Speed,Duplex,VLAN
+{%- for interface in to_parse_interfaces %}
+{{ interface }},{{ to_parse_interfaces[interface].name | default("Not Named") }},{{ to_parse_interfaces[interface].status }},{{ to_parse_interfaces[interface].port_speed }},{{ to_parse_interfaces[interface].duplex_code }},{{ to_parse_interfaces[interface].vlan }}
+{%- endfor %}

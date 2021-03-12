@@ -1,0 +1,22 @@
+<html><body>
+<h1>Show Interfaces Status for 3850</h1>
+<table style="width:100%">
+  <tr>
+    <th>Interface</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Duplex</th>
+    <th>VLAN</th>   
+  </tr>
+{%- for interface in to_parse_interfaces %}  
+  <tr>
+    <td>{{ interface }}</td>
+    <td>{{ to_parse_interfaces[interface].name | default("Not Named") }}</td>
+    <td>{{ to_parse_interfaces[interface].status }}</td>
+    <td>{{ to_parse_interfaces[interface].port_speed }}</td>
+    <td>{{ to_parse_interfaces[interface].duplex_code }}</td>
+    <td>{{ to_parse_interfaces[interface].vlan }}</td>
+  </tr>
+{%- endfor %}
+</table>
+</body></html>
