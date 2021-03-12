@@ -6,7 +6,6 @@ $ pyats run job Modern_Show_Interface_Status_job.py --testbed-file ../testbed/38
 '''
 
 import os
-import argparse
 
 def main(runtime):
     # Find the location of the script in relation to the job file

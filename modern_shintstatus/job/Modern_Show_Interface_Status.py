@@ -10,7 +10,6 @@
 import sys
 import time
 import logging
-import csv
 import json
 
 # ----------------
